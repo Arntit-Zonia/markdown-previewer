@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Previewer from "./Previewer";
+import defaultText from "../defaultText";
 
 const Editor = () => {
-	const [input, setInput] = useState("");
+	const [input, setInput] = useState(defaultText);
 
 	return (
-		<div>
+		<div style={{ whiteSpace: "pre-line" }}>
 			<h1>Editor</h1>
 			<textarea
 				onChange={(e) => setInput(e.target.value)}
@@ -15,7 +16,7 @@ const Editor = () => {
 				cols="50"
 				rows="10"
 			></textarea>
-			<Previewer input={input} />
+			<Previewer input={input} setInput={setInput} />
 		</div>
 	);
 };
