@@ -3,7 +3,7 @@ import marked from "marked";
 
 const Previewer = ({ input }) => {
 	function markdownText() {
-		const rawMarkup = marked(input, { sanitize: true });
+		const rawMarkup = marked(input, { sanitize: true, breaks: true });
 		return { __html: rawMarkup };
 	}
 
