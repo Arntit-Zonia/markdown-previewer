@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import marked from "marked";
 
-const Previewer = ({ input, setInput }) => {
+const Previewer = ({ input }) => {
 	function markdownText() {
 		const rawMarkup = marked(input, { sanitize: true });
 		return { __html: rawMarkup };
@@ -9,9 +9,16 @@ const Previewer = ({ input, setInput }) => {
 
 	return (
 		<div
-			style={{ width: 500, height: "auto", border: "1px solid black" }}
+			style={{
+				width: 700,
+				height: "auto",
+				border: "1px solid black",
+				borderRadius: 15,
+				textAlign: "left",
+				padding: 10,
+				margin: "auto"
+			}}
 			id="preview"
-			className="m-auto"
 			dangerouslySetInnerHTML={markdownText()}
 		></div>
 	);

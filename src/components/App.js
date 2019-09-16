@@ -4,7 +4,7 @@ import Previewer from "./Previewer";
 
 const App = () => {
 	return (
-		<div className="text-center">
+		<div>
 			<Editor />
 		</div>
 	);
