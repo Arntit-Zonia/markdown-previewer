@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Previewer from "./Previewer";
 import defaultText from "../defaultText";
 
@@ -13,11 +13,11 @@ const Editor = () => {
 				value={input}
 				className="mb-3"
 				id="editor"
-				cols="50"
+				cols="70"
 				rows="10"
 			></textarea>
 			<h2 className="mb-3">Previewer</h2>
-			<Previewer input={input} setInput={setInput} />
+			<Previewer input={input} />
 		</div>
 	);
 };
